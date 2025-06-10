@@ -13,7 +13,7 @@ This repository contains a collection of small Bash scripts created as my first 
 1. Give the scripts execute permission:
 
 ```bash
-chmod +x main.sh git_uploader.sh automate_updater.sh
+chmod +x main.sh 
 ```
 
 2. Run the menu interface:
