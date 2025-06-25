@@ -20,10 +20,15 @@ pkg_installer(){
 	chmod +x automate_updater.sh
 	./automate_updater.sh
 }
+auto_mounter(){
+	chmod +x auto_mounter.sh
+	./auto_mounter.sh
+}
 menu(){
   echo -e "\nMenu:"
   ColorGreen "  1)"; echo " Github Repository Uploader"
   ColorGreen "  2)"; echo " Essential package installer"
+  ColorGreen "  3)"; echo " Driver auto mounter"
   ColorGreen "  0)"; echo " Exit"
   echo
 
@@ -37,6 +42,10 @@ menu(){
       ;;
     2)
       pkg_installer
+      menu
+      ;;
+    3)
+      auto_mounter
       menu
       ;;
     0)
