@@ -8,7 +8,10 @@ while true;do
 	read -p "is this your selected drive name(y/n)? " ans
 	if [[ "$ans" == "y" || "$ans" == "Y" ]]; then
 		who=$(whoami)
-		sudo mkdir /media/$who/share
+		if [ ! -d /media/$who/share ]; then
+    			sudo mkdir -p /media/$who/share
+		fi
+
 		sudo mount -t ntfs-3g /dev/$drive /media/$who/share/
 		break
 	else
