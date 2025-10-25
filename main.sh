@@ -24,11 +24,16 @@ auto_mounter(){
 	chmod +x auto_mounter.sh
 	./auto_mounter.sh
 }
+api_checker(){
+	chmod +x api_checker.sh
+	./api_checker.sh
+}
 menu(){
   echo -e "\nMenu:"
   ColorGreen "  1)"; echo " Github Repository Uploader"
   ColorGreen "  2)"; echo " Essential package installer"
   ColorGreen "  3)"; echo " Driver auto mounter"
+  ColorGreen "  4)"; echo " Api Checker"
   ColorGreen "  0)"; echo " Exit"
   echo
 
@@ -46,6 +51,10 @@ menu(){
       ;;
     3)
       auto_mounter
+      menu
+      ;;
+    4)
+      api_checker
       menu
       ;;
     0)
